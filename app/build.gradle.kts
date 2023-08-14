@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -72,5 +73,10 @@ dependencies {
     implementation ("com.squareup.okhttp3:okhttp:5.0.0-alpha.3")
     implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
     implementation ("com.google.code.gson:gson:2.10")
+    // Room
+    implementation ("androidx.room:room-runtime:2.4.2")
+    kapt ("androidx.room:room-compiler:2.4.2")
+    // Kotlin Extensions and Coroutines support for Room
+    implementation ("androidx.room:room-ktx:2.4.2")
 
 }
